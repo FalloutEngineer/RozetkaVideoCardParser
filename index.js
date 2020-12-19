@@ -2,7 +2,7 @@ const fs = require("fs");
 const puppeteer = require("puppeteer");
 let link = "https://hard.rozetka.com.ua/videocards/c80087/";
 
-const parseComputerComponents = async click => {
+const parseComputerComponents = async () => {
     try{
         let browser = await puppeteer.launch({headless:false, slowMo: 0, devtools: true});
         let page = await browser.newPage();
@@ -61,4 +61,4 @@ const parseComputerComponents = async click => {
     }
 }
 
-parseComputerComponents(0);
+parseComputerComponents();
